@@ -7,7 +7,6 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         
-        {/* Section 1: Brand details */}
         <div className="footer-section">
           <h3>The Car Washing Centre</h3>
           <p>Premium care for your vehicle. We use eco-friendly products and state-of-the-art equipment to make your car look brand new.</p>
@@ -16,7 +15,7 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Section 2: Quick Links */}
+
         <div className="footer-section">
           <h4>Quick Links</h4>
           <a href="#services">Our Services</a>
@@ -26,7 +25,7 @@ const Footer = () => {
           <a href="#contact">Contact Support</a>
         </div>
 
-        {/* Section 3: Contact & Social */}
+
         <div className="footer-section">
           <h4>Connect With Us</h4>
           <p style={{ marginBottom: '1rem' }}>

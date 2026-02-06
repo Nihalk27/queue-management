@@ -9,6 +9,17 @@ import { FaCarOn } from "react-icons/fa6";
 export default function App(){
 const [queue , setQueue] = useState([]);
 
+const [tagline] = useState(() => {
+  const lines = [
+    "...Premium care for your vehicle...",
+    "...Making your car shine like new!...",
+    "...Speedy service, spotless finish...",
+    "...Your car deserves a spa day...",
+    "...Dirt is history, shine is mystery..."
+  ];
+  const randomIndex = Math.floor(Math.random() * lines.length);
+  return lines[randomIndex];
+});
 const addToQueue = (customer) =>{
 setQueue([...queue,{...customer , id: Date.now(),status:"waiting"}]);
 };
@@ -25,7 +36,7 @@ setQueue(queue.filter(customer => customer.id !== id))
     <div className="app">
       <header>
         <h1>The Car Washing centre</h1>
-        <p><FaCarSide />  ...Premium care for your vehicle... <FaCarOn/> </p>
+        <p><FaCarSide /> {tagline} <FaCarOn/> </p>
       </header>
       <main>
         <QueueForm onAdd={addToQueue}/>
