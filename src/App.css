@@ -140,6 +140,9 @@ button:hover {
 .status {
   font-size: 0.875rem;
   font-weight: 500;
+  display: flex;         
+  align-items: center;   
+  gap:4px;
 }
 
 .actions {
@@ -172,5 +175,74 @@ button:hover {
 @media (max-width: 768px) {
   main {
     grid-template-columns: 1fr;
+  }
+}
+/* Footer Styles */
+.footer {
+  margin-top: 3rem; /* Pushes footer away from the main content */
+  padding-top: 2rem;
+  border-top: 1px solid var(--surface); /* Subtle divider */
+  color: var(--text-secondary);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 Equal columns */
+  gap: 2rem;
+  text-align: left;
+}
+
+.footer-section h3 {
+  color: var(--primary); /* Matches your Header color */
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-section h4 {
+  color: var(--text); /* White text for headings */
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.footer-section p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footer-section a {
+  display: block; /* Makes links sit on their own lines */
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-section a:hover {
+  color: var(--primary); /* Highlights purple on hover */
+}
+
+/* Social Icons specific styling */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  font-size: 1.2rem;
+  display: inline-block;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr; /* Stack vertically on mobile */
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .social-icons {
+    justify-content: center;
   }
 }
